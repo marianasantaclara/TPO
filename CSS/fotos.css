@@ -1,0 +1,305 @@
+*{
+    font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial; 
+}
+
+body{
+    color:#59514C;
+    font-family: 'Scope One', serif;
+    font-weight:600;
+    background-color: #FEF8D8;
+}
+
+.divheader{
+    display: grid;
+    color: white;
+    grid-template-columns:1fr 3fr 1fr;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    text-align:center;
+}
+
+#imagenheader7{
+    width: 80%;
+    margin:0px auto;
+}
+
+.h1{
+    color: #59514C;
+    align-self: center;    
+    font-size: 2em;
+    transition: transform 2s;
+}
+
+.h1:hover{
+    transform: scale(1.1,1.1); 
+}
+
+header img{
+    width: 100%;
+    height: auto;
+}
+
+header nav{
+    width: 100%;
+    max-width: auto;
+    margin:20px auto;
+    background:#59514C;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul{
+    overflow: auto;
+    list-style:none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a{
+    color:white;
+    padding:20px;
+    display: block;
+    text-decoration: none;
+}
+
+header nav ul li span{
+    margin-right: 10px;
+}
+
+header nav ul li a:hover{
+    background: #FEF8D8;
+    color: #59514C;
+}
+footer{
+    text-align: center; 
+}
+
+footer img{
+    margin-top: 10px;
+    width: 15%;
+}
+
+#iconos_footer{
+   font-size: 30px;
+}
+
+#h2f {
+    color:azure;
+    align-self: center;    
+    font-size: 2em;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+.slide {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+    width: 68%;
+    align-self: center;
+    display: flex;
+    
+}
+
+.slide-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+   
+    align-self: center;
+}
+
+.slide-open:checked + .slide-item {
+    position: static;
+    opacity: 100;
+}
+
+.slide-item {
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    align-self: center;
+}
+
+.slide-item img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+.slide-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+.slide-control.prev {
+    left: 2%;
+}
+
+.slide-control.next {
+    right: 2%;
+}
+
+.slide-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1,
+#slide-2:checked ~ .control-2,
+#slide-3:checked ~ .control-3,
+#slide-4:checked ~ .control-4,
+#slide-5:checked ~ .control-5,
+#slide-6:checked ~ .control-6,
+#slide-7:checked ~ .control-7,
+#slide-8:checked ~ .control-8
+{
+    display: block;
+}
+
+.slide-indicador {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+.slide-indicador li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.slide-circulo {
+    color: #828282;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+.slide-circulo:hover {
+    color: #aaaaaa;
+}
+
+#slide-1:checked ~ .control-1 ~ .slide-indicador li:nth-child(1) .slide-circulo,
+#slide-2:checked ~ .control-2 ~ .slide-indicador li:nth-child(2) .slide-circulo,
+#slide-3:checked ~ .control-3 ~ .slide-indicador li:nth-child(3) .slide-circulo,
+#slide-4:checked ~ .control-4 ~ .slide-indicador li:nth-child(4) .slide-circulo, 
+#slide-5:checked ~ .control-5 ~ .slide-indicador li:nth-child(5) .slide-circulo,
+#slide-6:checked ~ .control-6 ~ .slide-indicador li:nth-child(6) .slide-circulo,
+#slide-7:checked ~ .control-7 ~ .slide-indicador li:nth-child(7) .slide-circulo,
+#slide-8:checked ~ .control-8 ~ .slide-indicador li:nth-child(8) .slide-circulo {
+    color: #428bca;
+}
+
+#titulo {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+/* Por debajo de 1000px */
+@media screen and (max-width: 1000px){
+    .h1{
+    font-size:1.5em;
+    }
+    .header_buttons{
+    font-size:  0.8em;
+    }
+    }
+   
+/* Por debajo de 800px */
+@media screen and (max-width: 800px){
+    .h1{
+    font-size:1em;
+    }
+    .header_buttons{
+        font-size:  0.7em;
+        }
+
+    }
+/* Por debajo de 600px */
+@media screen and (max-width: 600px){
+.h1{
+font-size:0.8em;
+}
+.header_buttons{
+    font-size:0.5em;
+}
+
+section{
+    display:grid;
+    margin-left: 2em;
+    margin-right: 2em;
+    grid-template-columns: 1fr;
+}
+
+section h1{
+    font-size: 1em;
+}
+
+.slide {
+    width: 90%;
+}
+header nav{
+    width: 100%;
+    height: 100%;
+    left:-100%;
+    margin:0;
+    position:fixed;
+    display:block;
+}
+header nav ul li {
+    display:block;
+    float:none;
+    border-bottom: 1px solid rgba(225,255,255,.3);
+}
+
+/* Por debajo de 430px */
+@media screen and (max-width: 430px){
+.h1{
+font-size:0.5em;
+}
+
+}
+/* Por debajo de 300px */
+@media screen and (max-width: 300px){
+    section{
+            display:grid;
+            grid-template-columns: 1fr;
+            
+    }
+}

@@ -1,0 +1,240 @@
+*{
+    font-family: sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial; 
+}
+
+body{
+    color:#59514C;
+        font-weight:600;
+      background-color:#FEF8D8
+}
+
+.divheader{
+    display: grid;
+    color: white;
+    grid-template-columns:1fr 4fr 1fr;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    text-align:center;
+}
+
+#imagenheaderLogo{
+    width: 80%;
+    margin:0px auto;
+}
+
+#imagenheader{
+    display: flex;
+    justify-content: center;
+    transition: transform 2s;
+}
+
+.h1{
+    color: #59514C;
+    align-self: center;    
+    font-size: 2em;
+    transition: transform 2s;
+}
+
+.h1:hover{
+    transform: scale(1.1,1.1);
+}
+
+header img{
+    width: 100%;
+    height: auto;
+}
+
+#imagenheader:hover {
+    transform: scale(1.1,1.1); 
+}
+
+#imagensection{
+    transition: transform 2s; 
+}
+#imagensection:hover {
+    transform: scale(1.2,1.2); 
+}
+
+header nav{
+    width: 100%;
+    max-width: auto;
+    margin:20px auto;
+    background:#59514C;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul{
+    overflow: auto;
+    list-style:none;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a{
+    color:white;
+    padding: 20px;
+    display: block;
+    text-decoration: none;
+}
+
+header nav ul li span{
+    margin-right: 10px;
+}
+
+header nav ul li a:hover{
+    background: #FEF8D8;
+    color: #59514C;
+}
+
+section{
+    color:#2e483c;
+    display:flex;
+    justify-content: space-between;
+    align-items:center;  
+}
+
+section img {
+    width: 70%;
+    padding: 10px;
+    border-radius: 1em;   
+}
+
+section div {
+    padding: 20px;
+    font-size: 1em;
+    text-align: center;
+}
+
+section p {
+    position: relative;
+    animation: fadeTopIn 2s;
+}
+
+.changing {
+    animation: fadeTopIn 2s;
+}
+
+@keyframes fadeTopIn {
+    0% {
+      transform: translate3d(0, -20%, 0);
+      transform: translate3d(0, -20%, 0);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: none;
+      transform: none;
+      opacity: 1;
+    }
+}
+
+aside{
+    background-color: #59514C;
+    width: 100%;   
+    height: 420px;    
+    color:white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#mapa{
+    padding: 10px 20px;
+}
+
+footer{
+    text-align: center; 
+}
+
+footer img{
+    /*margin-top: 10px;*/
+    width: 15%;
+}
+
+#iconos_footer{
+   font-size: 30px;
+}
+
+/* Por debajo de 1000px */
+@media screen and (max-width: 1000px){
+        .h1{
+        font-size:1.5em;
+        }
+}
+/* Por debajo de 800px */
+@media screen and (max-width: 800px){
+        .h1{
+        font-size: 1em;
+        width: 100%;
+        }
+
+        header nav{
+            width: 100%;
+            height: 100%;
+            left:-100%;
+            margin:0;
+            position:fixed;
+            display:block;
+        }
+        header nav ul li {
+            display:block;
+            float:none;
+            border-bottom: 1px solid rgba(225,255,255,.3);
+            font-size: 0.5rem;
+        }
+        section{
+            display: grid;
+            margin-left: 2em;
+            margin-right: 2em;
+            grid-template-columns: 1fr;
+            font-size:1em;
+    }
+
+        
+}       
+/* Por debajo de 600px */
+@media screen and (max-width: 600px){
+    .h1{
+    font-size:0.8em;
+    }
+
+    section{
+            display: grid;
+            margin-left: 2em;
+            margin-right: 2em;
+            grid-template-columns: 1fr;
+            font-size:0.8em;
+    }
+
+    section h1{
+        font-size: 1em;
+    }
+}
+
+/* Por debajo de 430px */
+@media screen and (max-width: 430px){
+    .h1{
+    font-size:0.5em;
+    }
+    section{
+        display:grid;
+        grid-template-columns: 1fr;
+        font-size:0.8em;
+        padding: 0;
+    }
+}
+    /* Por debajo de 300px */
+    @media screen and (max-width: 300px){
+        section{
+                display:grid;
+                grid-template-columns: 1fr;
+                font-size:0.7em;
+                padding: 0;
+            }
+    }
+
+}
